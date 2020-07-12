@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+    <name>Recranet Online Boeken</name>
+    <author>Recranet</author>
+    <version>1.0.0</version>
+    <description>Recranet Joomla Elements module voor de integratie van Recranet Online Boeken. Heeft u vragen? Mail dan naar support@recranet.com.</description>
+    <files>
+        <filename>mod_recranet.xml</filename>
+        <filename module="mod_recranet">mod_recranet.php</filename>
+        <filename>index.html</filename>
+        <filename>css/mod_recranet.css</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="locale"
+                    type="list"
+                    default="nl"
+                    label="Taal"
+                    description="">
+                    <option value="nl">Nederlands</option>
+                    <option value="de">Deutsch</option>
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                </field>
+                <field
+                    name="currency"
+                    type="list"
+                    default="EUR"
+                    label="Munteenheid"
+                    description="">
+                    <option value="EUR">Euro</option>
+                    <option value="USD">Amerikaanse dollar</option>
+                    <option value="DKK">Deense kroon</option>
+                </field>
+                <field
+                    name="module"
+                    type="list"
+                    default="accommodations"
+                    label="Modules"
+                    description="">
+                    <option value="accommodations">Accommodaties</option>
+                    <option value="search-bar">Zoekbalk</option>
+                    <option value="map">Boeken vanaf interactieve kaart</option>
+                    <option value="featured-accommodations">Uitgelichte accommodaties</option>
+                    <option value="packages">Arrangementen en seizoenplaatsen</option>
+                    <option value="reviews-summary">Reviews - Samenvatting</option>
+                    <option value="reviews-panel">Reviews - Score paneel met willekeurige accommodatie</option>
+                </field>
+                <field
+                    name="baseUrl"
+                    type="text"
+                    default=""
+                    label="baseUrl"
+                    description="Pas het baseUrl attribuut aan naar het pad waarop de accommodaties te vinden zijn (bijvoorbeeld /nl/accommodaties/). De gebruiker wordt automatisch doorgestuurd naar deze pagina wanneer de bezoeker zich nog niet op deze pagina bevindt. Het is belangrijk dat deze URL begint en eindigt met een slash (/)." 
+                    showon="module:map[OR]module:featured-accommodations[OR]module:packages[OR]module:reviews-panel[OR]module:search-bar" />
+                <field
+                    name="accommodationsView"
+                    type="list"
+                    default="list"
+                    label="Accommodaties overzicht"
+                    description=""
+                    showon="module:accommodations">
+                    <option value="list">Lijstweergave</option>
+                    <option value="cards">Kaartweergave</option>
+                </field>
+                <field
+                    name="organization"
+                    type="number"
+                    default=""
+                    label="Organisatie ID"
+                    description="" />
+                <field
+                    name="accommodationCategory"
+                    type="number"
+                    default=""
+                    label="Accommodatie categorie ID"
+                    description=""
+                    showon="module:featured-accommodations" />
+                <field
+                    name="localityCategory"
+                    type="number"
+                    default=""
+                    label="Locatie categorie ID"
+                    description=""
+                    showon="module:featured-accommodations" />
+                <field
+                    name="packageSpecificationCategory"
+                    type="number"
+                    default=""
+                    label="Seizoenplaatsen of arrangementen categorie ID"
+                    description=""
+                    showon="module:packages" />
+                <field
+                    name="googleApiKey"
+                    type="text"
+                    default=""
+                    label="Google API key"
+                    description="" />
+                <field
+                    name="sdk"
+                    type="radio"
+                    default="1"
+                    label="Laad de Recranet SDK"
+                    description=""
+                    class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                    name="reviewsSummaryElementStyle"
+                    type="radio"
+                    default="default"
+                    label="Element style"
+                    description=""
+                    class="btn-group btn-group-yesno">
+                    <option value="default">default</option>
+                    <option value="light">light</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
