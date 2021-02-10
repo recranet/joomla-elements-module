@@ -2,7 +2,7 @@
 <extension type="module" version="3.1" client="site" method="upgrade">
     <name>Recranet Booking</name>
     <author>Recranet</author>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <description>Recranet Elements module voor de integratie van Recranet Booking. Heeft u vragen? Mail dan naar support@recranet.com.</description>
     <files>
         <filename>mod_recranet.xml</filename>
