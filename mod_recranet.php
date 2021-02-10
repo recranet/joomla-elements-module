@@ -44,7 +44,7 @@ if ($params->get('sdk')) {
         "<script type='text/javascript'>" . PHP_EOL .
         "   window.recranetConfig = %s;" . PHP_EOL .
         "</script>" . PHP_EOL .
-        "<script src='https://static.recranet.com/elements/sdk-%s/sdk.js?%s' type='text/javascript' async></script>";
+        "<script src='https://static.recranet.com/elements/%s/sdk.js?%s' type='text/javascript' async></script>";
 
     // Add javascript tag to dom
     $document->addCustomTag(vsprintf($scriptHtml, [json_encode($recranetConfig), (string) $params->get('locale'), $randomString]));
