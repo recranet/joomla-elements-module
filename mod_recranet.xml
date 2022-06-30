@@ -25,6 +25,8 @@
                     <option value="de">Deutsch</option>
                     <option value="en">English</option>
                     <option value="fr">Français</option>
+                    <option value="es">Spaans</option>
+                    <option value="cs">Tsjechisch</option>
                 </field>
                 <field
                     name="currency"
