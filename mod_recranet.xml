@@ -36,7 +36,6 @@
                     description="">
                     <option value="EUR">Euro</option>
                     <option value="USD">Amerikaanse dollar</option>
-                    <option value="DKK">Deense kroon</option>
                 </field>
                 <field
                     name="module"
