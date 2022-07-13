@@ -13,6 +13,7 @@ defined('_JEXEC') or die;
 $recranetConfig = array(
     'organization' => (int) $params->get('organization'),
     'locale' => (string) $params->get('locale'),
+    'country' => $params->get('country', null),
     'currency' => (string) $params->get('currency'),
     'googleApiKey' => (string) $params->get('googleApiKey'),
 );
