@@ -14,7 +14,7 @@ $reviewsSummaryElementStyle = (string) $params->get('reviewsSummaryElementStyle'
 
 switch ($modules) {
     case 'accommodations':
-        echo '<recranet-accommodations class="recranet-element" ' . ($accommodationView == 'cards' ? 'layoutType="cards"' : '') . '></recranet-accommodations>';
+        echo '<recranet-accommodations class="recranet-element" ' . ($accommodationView == 'cards' ? 'layoutType="cards"' : '') . ($baseUrl ? 'baseUrl="' . $baseUrl . '"' : '') . ' ></recranet-accommodations>';
         break;
     case 'search-bar':
         echo '<recranet-search-bar class="recranet-element" formAction="' . ($baseUrl ? $baseUrl : '/') . '"></recranet-search-bar>';
